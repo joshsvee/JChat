@@ -1,0 +1,251 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "jchat.exe.manifest"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SESSION_MANAGER DIALOGEX 0, 0, 460, 188
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE | WS_EX_APPWINDOW
+CAPTION "Chat - Session Manager"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Create a server",IDC_RADIO_SERVER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,15,20,77,9
+    EDITTEXT        IDC_EDIT_SERVER,213,16,171,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SERVER_PORT,213,36,171,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Create",IDC_BTN_CREATE_SERVER,397,18,50,14
+    CONTROL         "Join a server",IDC_RADIO_JOIN,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,15,39,79,11
+    EDITTEXT        IDC_EDIT_NAME,213,77,171,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_JOIN_IPADDRESS_SERVER,"SysIPAddress32",WS_TABSTOP,
+                    213,97,171,15
+    EDITTEXT        IDC_EDIT_JOIN_SERVER_PORT,213,117,171,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Connect",IDC_BTN_CONNECT,397,80,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,397,150,50,14
+    GROUPBOX        "Create a Server",IDC_STATIC,153,7,300,52
+    LTEXT           "Server Name:",IDC_STATIC,163,18,45,11
+    GROUPBOX        "Join a Server",IDC_STATIC,153,64,300,74
+    LTEXT           "Static",IDC_STATIC_STATUS,168,155,224,13
+    GROUPBOX        "Status",IDC_STATIC,153,142,300,33
+    RTEXT           "Port:",IDC_STATIC_PORT,185,38,21,8
+    RTEXT           "IP Address:",IDC_STATIC,163,99,43,12
+    RTEXT           "Port:",IDC_STATIC,171,119,36,11
+    LTEXT           "Name:",IDC_STATIC,187,79,22,8
+    GROUPBOX        "Options",IDC_STATIC,7,7,140,52
+    CONTROL         123,IDC_STATIC,"Static",SS_BITMAP,7,69,140,92
+END
+
+IDD_CHAT DIALOGEX 0, 0, 336, 290
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Everyone",IDC_RADIO_EVERYONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,17,18,48,11
+    CONTROL         "",IDC_RADIO_SPECIFIC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,17,32,8,10
+    COMBOBOX        IDC_COMBO_NAMES,29,30,216,57,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Send",IDOK,267,66,50,14
+    PUSHBUTTON      "Clear",IDC_BTN_CLEAR,267,140,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,267,161,50,14
+    CONTROL         "",IDC_RICHEDIT_CHAT,"RichEdit20A",ES_MULTILINE | 
+                    ES_READONLY | WS_BORDER | WS_VSCROLL,7,140,246,143
+    GROUPBOX        "Send To:",IDC_STATIC,7,7,249,47
+    GROUPBOX        "Message",IDC_STATIC,7,62,248,69
+    ICON            "",IDC_STATIC_PIC,284,20,20,20
+    EDITTEXT        IDC_EDIT_SEND_TEXT,14,74,234,46,ES_AUTOHSCROLL
+END
+
+IDD_SERV DIALOGEX 0, 0, 359, 261
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Chat Server Console"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Exit",IDCANCEL,302,226,50,14
+    PUSHBUTTON      "Clear",IDC_BTN_CLEAR_SERVER,7,226,50,14
+    CONTROL         "",IDC_RICHEDIT_SERVER_CON,"RichEdit20A",ES_MULTILINE | 
+                    ES_READONLY | ES_NUMBER | WS_BORDER | WS_VSCROLL,7,7,345,
+                    208
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SESSION_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 453
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_CHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_SERV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "chatter.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,5
+ PRODUCTVERSION 2,0,0,5
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Chat Application"
+            VALUE "FileVersion", "2, 0, 0, 5"
+            VALUE "InternalName", "JChat"
+            VALUE "LegalCopyright", "Copyright (C) 2005 - 2006"
+            VALUE "OriginalFilename", "JChat.exe"
+            VALUE "ProductName", "Chat Application"
+            VALUE "ProductVersion", "2, 0, 0, 5"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_WINSOCK_INIT_ERR    "Could not initialize Winsock!\nTry restarting the application."
+    IDS_WINSOCK_INIT_OK     "Winsock initialized...OK!"
+    IDS_CAPTION_SESSION_MGR "J-Chat Session Manager"
+    IDS_NAME_ERR            "Please enter a name up to 30 characters!"
+    IDS_PORT_ERR            "Please type a valid port (1024 to 65535)."
+    IDS_JOIN_ERR            "Enter the ip address of the server you want to join!"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

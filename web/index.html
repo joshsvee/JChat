@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>JChat Web Socket Example</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="jchat.js"></script>
+        <style type="text/css">
+			#output 
+			{
+				height: 300px;
+				width: 600px;
+				overflow: auto;
+				border: 1px solid #000000;
+			}
+			
+			#input
+			{
+				width: 600px;
+				border: 1px solid #000000;
+			}
+        </style>
+    </head>
+    <body>
+		<table width="600" border="0">
+        	<tr>
+            	<td>
+            		Send to:
+                </td>
+            </tr>
+            <form id="send" name="send" method="" action="">
+                <tr>
+                    <td>
+                        <label>
+                            <input type="radio" name="SendGroup" value="radio" id="SendGroup_0" checked="checked" />
+                            Everyone
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="SendGroup" value="radio" id="SendGroup_1" />
+                        <select name="SendMenu" id="SendMenu" onchange="MM_SendMenu('parent',this,0)">
+                            <option>Browser</option>
+                        </select>
+                    </td>
+                </tr>
+            </form>
+            <tr>
+                <td>
+                	<p id="output"></p>
+                </td>
+			</tr>
+			<tr>
+                <td>
+                	<form id="formInput" name="formInput" method="" action="">
+                		<input type="text" name="input" id="input" />
+                	</form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
